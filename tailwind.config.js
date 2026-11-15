@@ -1,0 +1,45 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: ["class"],
+  content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+  theme: {
+    container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
+    extend: {
+      colors: {
+        background: "#FAFAF8",
+        foreground: "#1A1A1A",
+        primary: { DEFAULT: "#1A5C38", foreground: "#FFFFFF", light: "#2D7A50", dark: "#0F3D25" },
+        secondary: { DEFAULT: "#7D9B76", foreground: "#FFFFFF", light: "#A0B89A" },
+        accent: { DEFAULT: "#D4A043", foreground: "#1A1A1A", light: "#E8BB6E" },
+        muted: { DEFAULT: "#F0EFEC", foreground: "#6B7280" },
+        card: { DEFAULT: "#FFFFFF", foreground: "#1A1A1A" },
+        border: "#E5E3DF",
+        input: "#E5E3DF",
+        ring: "#1A5C38",
+        destructive: { DEFAULT: "#DC2626", foreground: "#FFFFFF" },
+        success: { DEFAULT: "#16A34A", foreground: "#FFFFFF" },
+        warning: { DEFAULT: "#D97706", foreground: "#FFFFFF" },
+      },
+      fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+      fontSize: {
+        "2xs": "0.625rem",
+        xs: ["0.75rem", "1rem"],
+        sm: ["0.875rem", "1.25rem"],
+        base: ["1rem", "1.5rem"],
+        lg: ["1.125rem", "1.75rem"],
+        xl: ["1.25rem", "1.75rem"],
+        "2xl": ["1.5rem", "2rem"],
+        "3xl": ["1.875rem", "2.25rem"],
+        "4xl": ["2.25rem", "2.5rem"],
+      },
+      spacing: { "touch": "44px" },
+      borderRadius: { lg: "0.5rem", md: "0.375rem", sm: "0.25rem" },
+      animation: { "fade-in": "fadeIn 0.2s ease-in-out", "slide-up": "slideUp 0.2s ease-out" },
+      keyframes: {
+        fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
+        slideUp: { "0%": { transform: "translateY(8px)", opacity: "0" }, "100%": { transform: "translateY(0)", opacity: "1" } },
+      },
+    },
+  },
+  plugins: [],
+}
